@@ -1,3 +1,4 @@
+var maxContacts = 12; 
 function getContacts(){
 	// if there are no contacts, ask the user to create one
 	if (!navigator.contacts){
@@ -27,7 +28,7 @@ function getContacts(){
 
 function showContacts(matches){
 	
-	var maxContacts = 12; 
+	
 	var contacts = document.getElementById("showcontacts");
 
 	var ul = document.createElement("ul"); 
@@ -44,11 +45,13 @@ function showContacts(matches){
 			ul.appendChild(li);
 			//matches[randomid].phoneNumbers[count].value
 			contactsJSON.push({id : count, displayName : matches[count].displayName, phoneNumber : matches[count].phoneNumbers[0].value, numberType : matches[count].phoneNumbers[0].type});
+			
 	}
 	contacts.appendChild(ul);
 
 	app.init(); 
-	localStorage.setItem("ioud0001-interactions", contactsJSON); // send array values to localStorage
+	localStorage.clear();
+	//localStorage.setItem("ioud0001-interactions", contactsJSON); // send array values to localStorage
 }
 
 function searchError(){
