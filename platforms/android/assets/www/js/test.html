@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<div class="wrapper">
+<section data-role="page" id="gifts-for-person" style="display: none">
+			<h2>Gift Ideas <button class="btnAdd" id="addperson">+</button></h2>
+			<p class="details">
+			Here are all the gifts ideas for <span>PERSON</span> for all occasions.
+			</p>
+            <input type="text" id="txt" />
+			<ul data-role="listview" id="peoplegifts">
+				<!-- 
+				list of items to be dynamically added 
+				single-tap gift idea to toggle purchased state for gift
+ 				double-tap gift idea to remove from list
+				-->
+			</ul>
+		</section>
+        	<!-- modal for adding an entry to person or occasion table -->
+	<div data-role="modal" id="add-person" style="display: none">
+		<h3>Title (new person)</h3>
+		<form>
+			<div class="formBox">
+				<input type="text" id="new-per-occ" value="" placeholder="" class=""/>
+			</div>
+			<div class="formBox">
+				<input type="button" class="btnCancel" value="CANCEL" />
+				<input type="button" class="btnSave" value="SAVE" />
+			</div>
+		</form>	
+	</div>
+</div>
+</body>
+</html>

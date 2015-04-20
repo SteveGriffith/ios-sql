@@ -1,0 +1,133 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+Monochromatic color scheme:
+grey: #7D7F7F
+light-grey: #C8CCCC
+cyan: #14E9FF
+white: #FAFFFF
+*/
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+  font-family:'Open Sans', sans-serif;
+}
+h2{
+  font-size:1.6rem;
+  padding:1rem 0;
+}
+p{
+  font-size:1.0rem;
+  padding:1rem 0;
+}
+.wrapper{
+  width:100%;
+  height:100%;
+}
+/*************************************
+        Layout
+*************************************/
+[data-role=page]{
+  position:absolute;
+  z-index:5;
+  top:0;
+  left:0;
+  width:100%;
+  min-height:100%;
+  color: #54125E;
+  background-color: #9408F1;
+  padding:1rem;
+ background: -webkit-linear-gradient(white, #CC3ADB); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(white, #CC3ADB); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(white, #CC3ADB); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(white, #CC3ADB); /* Standard syntax */
+}
+[data-role=page] a:link{
+  color: #15147A;
+  font-weight: 800;
+}
+[data-role=overlay]{
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:10;
+  height:100%;
+  width:100%;
+  background-color: rgba(0,0,0,0.82);
+  display: none;
+}
+[data-role=modal]{
+  position:fixed;
+  top:20%;
+  left:10%;
+  width: 80%;
+  z-index:15;
+  max-height:80%;
+  padding:5vh;
+  border:1px solid #333;
+  min-height:10%;
+  color: #33108B;
+  background-color: #EACFF3;
+  border-color: #9ecaed;
+  box-shadow: 0 0 20px #DD78E0;
+  display: none;
+  outline: none;  
+}
+/*************************************
+        Forms
+*************************************/
+.formBox{
+  padding: 0.6rem 0;
+}
+input, select{
+  line-height: 1.6rem;
+  font-size: 1.2rem;
+  padding:0 1rem;
+  max-width:90%;
+}
+.narrow{
+  width:2rem;
+}
+.btn{
+  width:auto;
+}
+.med{
+  width:10rem;
+}
+.lg{
+  width:25rem;
+}
+.xlg{
+  width:40rem;
+}
+/*************************************
+        Pages
+*************************************/
+#divmap{
+  display:none;
+}
+[data-role=listview]{
+  list-style:none;
+}
+[data-role=listview] li{
+  font-size:1.2rem;
+  line-height:3rem;
+  height:3rem;
+  border:1px solid #000;
+  background-color: #FF00FD;
+  color: #FFE2FD;
+  font-weight:300;
+  padding:0 1rem;
+  cursor:pointer;
+  margin-bottom: 4px;
+  text-align: center;
+  list-style: none;
+}
+[data-ref]:active{
+  background-color: #931FCD;
+}
+
+/*************************************
+        Modals
+*************************************/

@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Anna's giftr app</title>
+	<link href="css/main.css" rel="stylesheet"/>
+    
+</head>
+<body>
+<script src="cordova.js"></script>
+    <script src="js/test.js"></script>
+    <script src="js/taps.js"></script>
+    <script src="js/people.js"></script>
+    <script src="js/occasions.js"></script>
+	<div class="wrapper">
+		<!-- container for all pages -->
+
+<!------------------------------------------------ ALL Page Sections START HERE ---------------------------------->
+		<section data-role="page" id="people-list"   style="display: none">
+			<h2>People <button class="btnAdd" id="addperson">+</button></h2>
+			<p class="details">
+			Here are all the people for which <em>you</em> buy gifts.
+			</p>
+			<ul data-role="listview" id="allfriends">
+				<!-- 
+				list of items to be dynamically added 
+				single-tap to add gift for person through gifts-for-person page
+				double-tap to remove person
+				-->
+			</ul>
+		</section>
+	</div>
+		<section data-role="page" id="occasion-list">
+			<h2>Occasions <button class="btnAdd" id="addocc">+</button></h2>
+			<p class="details">
+			Add some occasions. 
+			</p>
+			<ul data-role="listview" id="alloccasions">
+				<!-- 
+				list of items to be dynamically added 
+				single-tap to add gift for occasion through gifts-for-occasion page
+				double-tap to remove occasion
+				-->
+			</ul>
+		</section>
+
+
+<!------------------------------------------------ ALL MODALS START HERE --------------------------------------->
+	<!-- always display the overlay between a page and modal -->
+	<div data-role="overlay">&nbsp;</div>
+	
+	<!-- modal for adding an entry to person or occasion table -->
+	<div data-role="modal" id="add-person" style="display: none">
+		<h3>Add a person to your list:</h3>
+		<form>
+			<div class="formBox">
+				<input type="text" id="new-per" value="" placeholder="" class=""/>
+			</div>
+			<div class="formBox">
+				<input type="button" class="btnCancel" value="CANCEL" id="modalcancelperson"/>
+				<input type="button" class="btnSave" value="SAVE" id="modalsaveperson" />
+			</div>
+		</form>	
+	</div>
+    
+    	<!-- always display the overlay between a page and modal -->
+	<div data-role="overlay">&nbsp;</div>
+	
+	<!-- modal for adding an entry to person or occasion table -->
+	<div data-role="modal" id="add-occ" style="display: none">
+		<h3>Add an occasion to your list:</h3>
+		<form>
+			<div class="formBox">
+				<input type="text" id="new-occ" value="" placeholder="" class=""/>
+			</div>
+			<div class="formBox">
+				<input type="button" class="btnCancel" value="CANCEL" id="modalcancelocc"/>
+				<input type="button" class="btnSave" value="SAVE" id="modalsaveocc" />
+			</div>
+		</form>	
+	</div>
+</body>
+</html>
